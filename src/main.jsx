@@ -1,9 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/home/Home.jsx";
+import Empresa from "./pages/empresa/Empresa.jsx";
+import Obras from "./pages/obras/Obras.jsx";
+import Servicos from "./pages/servicos/Servicos.jsx";
+import Contato from "./pages/contato/Contato.jsx";
+import Header from "./components/header/Header.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +34,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
+    <Header/>
     <RouterProvider router={router} />
   </>
 );
