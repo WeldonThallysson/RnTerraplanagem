@@ -11,22 +11,22 @@ import './CardsStyle.css'
 const Cards = ({titulo,descricao,imagem}) => {
   return (
     <Box>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card  sx={{ maxWidth: 260 }}>
         <CardMedia
-          sx={{ height: 280}}
+          sx={{ height: 180}}
           image={imagem}
         />
         
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+        <CardContent sx={{height:120}}>
+          <Typography id="titulo"  gutterBottom variant="h5" component="div">
             {titulo}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography  variant="body2" color="text.secondary">
             {descricao}
           </Typography>
         </CardContent>
         <CardActions >
-          <Button  size="small">Saiba Mais</Button>
+          <Button id="buttonSaibaMais" size="small">Saiba Mais</Button>
         </CardActions>
       </Card>
     </Box>
