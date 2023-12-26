@@ -20,14 +20,15 @@ const Footer = () => {
   return (
     <Box sx={{ flexGrow: 1, } }>
 
-      <AppBar position="static" sx={{ backgroundColor: " #252525", }}>
+      <AppBar position="static" sx={{ backgroundColor: " #252525",  height:''}}>
 
-        <StyledToolbar sx={{ display: "flex", justifyContent: "flex-end", alignItems:'flex-end' }}>
+        <StyledToolbar sx={{ display: "flex", justifyContent: "center", alignItems:'flex-end',marginTop:'-70px' }}>
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-end",
+              
             }}
             
           >  
