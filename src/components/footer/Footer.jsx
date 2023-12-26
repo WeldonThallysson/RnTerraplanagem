@@ -1,18 +1,65 @@
-import React from 'react'
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import LogoUpStudio from "../../assets/LogoUpStudio.png";
+
+const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+  alignItems: "flex-start",
+  paddingTop: theme.spacing(1),
+  paddingBottom: theme.spacing(2),
+  // Override media queries injected by theme.mixins.toolbar
+  "@media all": {
+    minHeight: 128,
+  },
+}));
 
 const Footer = () => {
   return (
-    <div>
-        <div>
-            <h2>Endereço</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.quo doloremque</p>
-        </div>
-        <div>
-           <h2>Contato</h2>
-           <p>(48)99998-8822</p> 
-        </div>
-    </div>
-  )
-}
+    <Box sx={{ flexGrow: 1, } }>
 
-export default Footer
+      <AppBar position="static" sx={{ backgroundColor: " #252525", }}>
+
+        <StyledToolbar sx={{ display: "flex", justifyContent: "flex-end", alignItems:'flex-end' }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-end",
+            }}
+            
+          >  
+           <Typography
+              variant="h5"
+              noWrap
+              component="div"
+              sx={{ flexGrow: 1, alignSelf: "flex-start", fontSize: "10px", marginBottom:'-47px' }}
+            >
+              
+              desenvolvido por
+            </Typography>
+            <img
+              style={{ width: "70px", marginBottom: "-20px" }}
+              src={LogoUpStudio}
+              alt="Logo da agência que criou o site, em cor laranja e branco"
+              
+            />
+            <Typography
+              variant="h5"
+              noWrap
+              component="div"
+              sx={{ flexGrow: 1, alignSelf: "flex-end", fontSize: "10px" }}
+            >
+              
+              © Copyright RN Terraplanagem
+            </Typography>
+          </Box>
+        </StyledToolbar>
+      </AppBar>
+    </Box>
+  );
+};
+
+export default Footer;
