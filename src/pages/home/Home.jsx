@@ -1,10 +1,14 @@
-import React from "react";
+
+import React from 'react'
+import CarrosselPrincipal from '../../components/carrosselPrincipal/CarrosselPrincipal'
+
 import Cards from "../../components/cards/Cards";
 import { Box, Grid } from "@mui/material";
 import imagemCard1 from "../../assets/imagensCards/imagemCard1.jpg";
 import imagemCard2 from "../../assets/imagensCards/imagemCard2.jpg";
 import imagemCard3 from "../../assets/imagensCards/imagemCard3.jpg";
 import "./Home.css";
+
 
 const Home = () => {
   const informacoesCards = [
@@ -31,9 +35,10 @@ const Home = () => {
     },
   ];
   return (
-
-    <Grid display={'flex'} justifyContent={"center"}  container spacing={2}>
-
+     <Grid display={'flex'} justifyContent={"center"}  container spacing={2}>
+      <div>
+        <CarrosselPrincipal/>
+      </div>
       {informacoesCards.map((item) => (
         <Grid display={'flex'} justifyContent={"center"} item xs={12} sm={3} md={3} lg={3} margin={'50px 0 0 0'}>
           <Cards
@@ -44,7 +49,7 @@ const Home = () => {
         </Grid>
       ))}
     </Grid>
-  );
-};
-
+    
+  )
+}
 export default Home;
