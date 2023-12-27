@@ -19,17 +19,18 @@ const CarrosselPrincipal = () => {
         img:imagem1
     },
     {
-        id:1,
+        id:2,
         img:imagem2
-    }, {
-        id:1,
+    }, 
+    {
+        id:3,
         img:imagem1
     }
 
 ]
   return (
     <Box>
-      <Swiper
+      <Swiper 
         pagination={{
           dynamicBullets: true,
         }}
@@ -37,7 +38,7 @@ const CarrosselPrincipal = () => {
         className="mySwiper"
       >
         {imagens.map((item)=>(
-            <SwiperSlide key={item.id}><img src={item.img} alt="" /></SwiperSlide>
+            <SwiperSlide key={item.id}><img src={item.img} alt="Imagens aleatorias da RN" /></SwiperSlide>
         ))}
         
         
