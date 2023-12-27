@@ -1,0 +1,18 @@
+:root {
+    --corDasfontes:rgb(46, 44, 44);
+    --fonte-cards: 'Roboto', sans-serif;
+  }
+
+#buttonSaibaMais{
+    color: var( --corDasfontes);
+    font-family: 'Roboto', sans-serif;
+}
+#titulo{
+    color: var( --corDasfontes);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    
+}
+
+
+
