@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/home/Home.jsx";
@@ -9,6 +8,7 @@ import Obras from "./pages/obras/Obras.jsx";
 import Servicos from "./pages/servicos/Servicos.jsx";
 import Contato from "./pages/contato/Contato.jsx";
 import Footer from "./components/footer/Footer.jsx";
+
 
 const router = createBrowserRouter([
   {
