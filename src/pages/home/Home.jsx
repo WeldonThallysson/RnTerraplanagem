@@ -35,6 +35,7 @@ const Home = () => {
     },
   ];
   return (
+
   <>
      <Grid display={'flex'} justifyContent={"center"}  container spacing={2}>
       <div>
@@ -50,12 +51,7 @@ const Home = () => {
         </Grid>
       ))}
     </Grid>
-      
-    
   </>
-
-  
-
   )
 }
 export default Home;
