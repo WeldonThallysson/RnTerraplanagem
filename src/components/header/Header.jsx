@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -15,6 +14,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Logo from '../../assets/Logo.png';
+import './Header.css'
 
 
 const drawerWidth = 240;
@@ -30,15 +30,13 @@ const Header = (props) => {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-          <Typography variant="h6" sx={{ my: 2 }}>
-            MUI
-          </Typography>
+         
           <Divider />
           <List>
             {navItems.map((item) => (
               <ListItem key={item} disablePadding>
-                <ListItemButton sx={{ textAlign: 'center' }}>
-                  <ListItemText primary={item} />
+                <ListItemButton  sx={{ textAlign: 'center', fontSiz:'10px' }}>
+                  <ListItemText   primary={item} />
                 </ListItemButton>
               </ListItem>
             ))}
@@ -50,16 +48,16 @@ const Header = (props) => {
 
   return (
     
-     <Box sx={{ display: 'flex' ,}}>
+     <Box sx={{ display: 'flex', }}>
       <CssBaseline />
       <AppBar sx={{ background:'#252525',margin:'0 0'}} component="nav">
-        <Toolbar sx={{ margin:'0 5px'}}>
+        <Toolbar sx={{ margin:'0 8px' }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: 'none' }  }}
           >
             <MenuIcon />
           </IconButton>
@@ -68,7 +66,7 @@ const Header = (props) => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-           <img src={Logo} alt="Imagem da logo" style={{width:'60px'}} />
+           <img src={Logo} alt="Imagem da logo" style={{width:'55px', marginTop:'10px'}} />
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
