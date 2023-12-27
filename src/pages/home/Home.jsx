@@ -37,12 +37,13 @@ const Home = () => {
   return (
 
   <>
-     <Grid display={'flex'} justifyContent={"center"}  container spacing={2}>
-      <div>
+    <div>
         <CarrosselPrincipal/>
       </div>
+     <Grid display={'flex'} justifyContent={"center"}  container spacing={2}>
+    
       {informacoesCards.map((item) => (
-        <Grid display={'flex'} justifyContent={"center"} item xs={12} sm={3} md={3} lg={3} margin={'50px 0 0 0'}>
+        <Grid display={'flex'} justifyContent={"center"}  item xs={12} sm={3.5} md={3.5} lg={2.7} margin={'50px 0 0 0' }>
           <Cards
             titulo={item.titulo}
             descricao={item.descricao}
