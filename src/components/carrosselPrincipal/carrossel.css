@@ -1,10 +1,13 @@
 #app {
     height: 100%;
+    
+
   }
   html,
   body {
     position: relative;
     height: 100%;
+    
   }
   
   body {
@@ -43,13 +46,14 @@
   /*Responsividade*/
   @media screen and (min-width: 320px) {
     .swiper-slide img{
-        height: 140px;
+        height: 130px;
+        margin-top: 55px;
     }
     
   }
   @media screen and (min-width: 768px) {
     .swiper-slide img{
-        height: 200px;
+        height: 240px;
     }
     
   }
@@ -61,13 +65,14 @@
   }
   @media screen and (min-width:1024px) {
     .swiper-slide img{
-        height: 260px;
+        height: 290px;
     }
     
   }
   @media screen and (min-width:1300px) {
     .swiper-slide img{
         height: 400px;
+       
     }
     
   }
