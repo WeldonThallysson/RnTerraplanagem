@@ -10,10 +10,10 @@ import './CardsStyle.css'
 
 const Cards = ({titulo,descricao,imagem}) => {
   return (
-    <Box>
-      <Card  sx={{ maxWidth: 260 }}>
-        <CardMedia
-          sx={{ height: 180}}
+    <Box >
+      <Card  id='cards' sx={{ maxWidth: 310, marginBottom:'-40px',}}>
+        <CardMedia id='imagemCard'
+          sx={{ height: 200}}
           image={imagem}
         />
         
@@ -21,7 +21,7 @@ const Cards = ({titulo,descricao,imagem}) => {
           <Typography id="titulo"  gutterBottom variant="h5" component="div">
             {titulo}
           </Typography>
-          <Typography  variant="body2" color="text.secondary">
+          <Typography  id='descricao' variant="body2" color="text.secondary">
             {descricao}
           </Typography>
         </CardContent>
