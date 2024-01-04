@@ -5,8 +5,8 @@ import "swiper/css";
 import "./carrossel.css";
 import { Pagination } from "swiper/modules";
 
-import imagem1 from "../../assets/imagensCarrosselPrincipal/imagem1.jpg";
-import imagem2 from "../../assets/imagensCarrosselPrincipal/imagem2.jpg";
+import imagem1 from "../../assets/imagensCarrosselPrincipal/imagem1.png";
+import imagem2 from "../../assets/imagensCarrosselPrincipal/imagem2.png";
 import imagem3 from "../../assets/imagensCarrosselPrincipal/imagem3.jpg";
 import imagem4 from "../../assets/imagensCarrosselPrincipal/imagem4.jpg";
 import { width } from "@mui/system";

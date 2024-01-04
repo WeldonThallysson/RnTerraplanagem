@@ -11,9 +11,23 @@ import './CardsStyle.css'
 const Cards = ({titulo,descricao,imagem}) => {
   return (
     <Box >
-      <Card  id='cards' sx={{ maxWidth: 310, marginBottom:'-40px',}}>
+      <Card id='cards' sx={{ 
+        width: 280, 
+        marginBottom:'-40px', 
+        transition: "0.3s ease-in-out",
+        transform: "translateY(0px)", 
+        "&:hover": { 
+          transition: "0.3s ease-in-out",
+          transform: "translateY(-14px)",
+          boxShadow: "2px 2px 12px rgba(0, 0, 0, 0.2)",
+          cursor: "pointer"
+        
+        }
+        
+        }}>
+        
         <CardMedia id='imagemCard'
-          sx={{ height: 200}}
+          sx={{ height: 180}}
           image={imagem}
         />
         
@@ -26,7 +40,7 @@ const Cards = ({titulo,descricao,imagem}) => {
           </Typography>
         </CardContent>
         <CardActions >
-          <Button id="buttonSaibaMais" size="small">Saiba Mais</Button>
+          <Button id="buttonSaibaMais" size="small">Saiba mais</Button>
         </CardActions>
       </Card>
     </Box>

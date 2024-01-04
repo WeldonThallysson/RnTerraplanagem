@@ -66,7 +66,7 @@ const Header = (props) => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-           <img src={Logo} alt="Imagem da logo" style={{width:'55px', marginTop:'10px'}} />
+           <img src={Logo} alt="Imagem da logo" style={{width:'190px', marginTop:'10px'}} />
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
