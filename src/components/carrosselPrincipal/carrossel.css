@@ -21,7 +21,6 @@
   
   .swiper {
     width: 100%;
-    height: 100%;
   }
   
   .swiper-slide {
@@ -78,8 +77,9 @@
     
   }
   @media screen and (min-width:1920px) {
+    
     .swiper-slide img{
-        height: 500px;
+        height: 600px;
     }
     
   } @media screen and (min-width:2560px) {

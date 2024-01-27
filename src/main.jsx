@@ -9,6 +9,10 @@ import Contato from "./pages/contato/Contato.jsx";
 import Servicos from "./pages/servicos/Servicos.jsx";
 import Header from "./components/header/Header.jsx";
 import Footer from "./components/footer/Footer.jsx";
+import App from "./App.jsx";
+
+import ProviderContext from "./contexts/ContextGeral/index.jsx";
+import TrabalheConosco from "./pages/trabalheconosco/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,13 +35,20 @@ const router = createBrowserRouter([
     path: "/contato",
     element: <Contato />,
   },
+  {
+    path: "/trabalheconosco",
+    element: <TrabalheConosco />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-
-    <Header/>
-     <RouterProvider router={router} />
-    <Footer/>
+  <ProviderContext>
+     <Header/>
+      <RouterProvider router={router} >
+        <App/>
+      </RouterProvider>
+     <Footer/>
+  </ProviderContext>
   </>
 );

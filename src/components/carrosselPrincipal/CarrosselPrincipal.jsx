@@ -3,7 +3,8 @@ import { Box } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./carrossel.css";
-import { Pagination } from "swiper/modules";
+import 'swiper/css/effect-fade';
+import { Pagination,Autoplay,EffectFade } from "swiper/modules";
 
 import imagem1 from "../../assets/imagensCarrosselPrincipal/imagem1.png";
 import imagem2 from "../../assets/imagensCarrosselPrincipal/imagem2.png";
@@ -36,7 +37,9 @@ const CarrosselPrincipal = () => {
         pagination={{
           dynamicBullets: true,
         }}
-        modules={[Pagination]}
+        autoplay={{delay: 3000}}
+        effect={'fade'}
+        modules={[Pagination,Autoplay,EffectFade]}
         className="mySwiper"
       >
         {imagens.map((item) => (

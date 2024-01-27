@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <Box sx={{ flexGrow: 1, } }>
 
-      <AppBar position="static" sx={{ backgroundColor: " #252525",  marginTop:'200px'}}>
+      <AppBar position="static" sx={{ backgroundColor: " #141414",  }}>
 
         <StyledToolbar sx={{ display: "flex", justifyContent: "center", alignItems:'flex-end',marginTop:'-70px' }}>
           <Box
@@ -28,7 +28,6 @@ const Footer = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-end",
-              
             }}
             
           >  
@@ -39,7 +38,7 @@ const Footer = () => {
               sx={{ flexGrow: 1, alignSelf: "flex-start", fontSize: "10px", marginBottom:'-47px' }}
             >
               
-              desenvolvido por
+              Desenvolvido por
             </Typography>
             <img
               style={{ width: "70px", marginBottom: "-20px" }}

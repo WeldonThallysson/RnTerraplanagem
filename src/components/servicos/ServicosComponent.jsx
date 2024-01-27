@@ -11,11 +11,10 @@ import './ServicosStyle.css'
 const ServicosComponent = ({titulo,descricao,imagem}) => {
   return (
     
-    <Box sx={{marginTop:'50px'}}>
+    <Box >
 
-    
-      <Card  id="card-servicos" sx={{ maxWidth: 240, marginBottom: "-100px" }}>
-        <CardMedia   sx={{ width:'70px', height: '70px', marginTop:'20px'}}
+      <Card id="card-servicos" >
+        <CardMedia sx={{ width:'70px', height: '70px',}}
          image={imagem}
         />
         <CardContent sx={{ height: 40 }}>

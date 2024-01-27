@@ -16,17 +16,104 @@
 
 
  /*Responsividade*/
- @media screen and (max-width: 320px ) {
+
+@media (max-width: 1920px ) {
+  
+    #imagemCard{
+        width: 100%;
+        height: 420px;
+    }
+    #conteudoCard{
+       
+        
+    }
+    #titulo{
+        font-size: 25px;
+    }
+    #descricao{
+        font-size: 18px;
+    }
+    #buttonSaibaMais{
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 50px;
+    }
+   
+    
+}
+
+@media screen and (max-width: 1440px ) {
+    
+   
     #cards{
-      width: 210px;
-      height:250px;
+      width: 320px;
+      height:390px;
       justify-content: center;
       align-items: center;
 
     }
     #imagemCard{
         width: 100%;
-        height: 120px;
+        height: 200px;
+    }
+    #titulo{
+        font-size: 21px;
+    }
+    #descricao{
+        font-size: 15px;
+    }
+    #buttonSaibaMais{
+        font-size: 15px;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+   
+    
+}
+
+
+@media screen and (max-width: 1366px ) {
+    
+    #cards{
+      max-width: 230px;
+        
+      justify-content: center;
+      align-items: center;
+
+
+    }
+    #imagemCard{
+        width: 100%;
+        height: 220px;
+    }
+    #titulo{
+        font-size: 25px;
+    }
+    #descricao{
+        font-size: 18px;
+    }
+    #buttonSaibaMais{
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 50px;
+    }
+   
+    
+}
+
+@media screen and (max-width: 768px ) {
+    
+   
+    #cards{
+      width: 210px;
+      height:290px;
+      justify-content: center;
+      align-items: center;
+
+    }
+    #imagemCard{
+        width: 100%;
+        height: 150px;
     }
     #titulo{
         font-size: 14px;
@@ -41,36 +128,10 @@
    
     
 }
-
-@media screen and (max-width: 375px ) {
+@media screen and (max-width: 475px ) {
     #cards{
-      width: 210px;
-      height:250px;
-      justify-content: center;
-      align-items: center;
-
-    }
-    #imagemCard{
-        width: 100%;
-        height: 120px;
-    }
-    #titulo{
-        font-size: 14px;
-    }
-    #descricao{
-        font-size: 10px;
-    }
-    #buttonSaibaMais{
-        font-size: 10px;
-        margin-top: -30px;
-    }
-   
-    
-}
-@media screen and (max-width: 390px ) {
-    #cards{
-      width: 230px;
-      height:280px;
+      width: 250px;
+      height:290px;
       justify-content: center;
       align-items: center;
 
@@ -118,10 +179,10 @@
    
     
 }
-@media screen and (max-width: 475px ) {
+@media screen and (max-width: 390px ) {
     #cards{
-      width: 250px;
-      height:290px;
+      width: 230px;
+      height:280px;
       justify-content: center;
       align-items: center;
 
@@ -143,19 +204,19 @@
    
     
 }
-@media screen and (max-width: 768px ) {
-    
-   
+
+
+@media screen and (max-width: 375px ) {
     #cards{
       width: 210px;
-      height:290px;
+      height:250px;
       justify-content: center;
       align-items: center;
 
     }
     #imagemCard{
         width: 100%;
-        height: 150px;
+        height: 120px;
     }
     #titulo{
         font-size: 14px;
@@ -170,63 +231,31 @@
    
     
 }
-@media screen and (min-width: 1440px ) {
-    
-   
+
+
+@media screen and (max-width: 320px ) {
     #cards{
-      width: 320px;
-      height:390px;
+      width: 210px;
+      height:250px;
       justify-content: center;
       align-items: center;
 
     }
     #imagemCard{
         width: 100%;
-        height: 200px;
+        height: 120px;
     }
     #titulo{
-        font-size: 21px;
+        font-size: 14px;
     }
     #descricao{
-        font-size: 15px;
+        font-size: 10px;
     }
     #buttonSaibaMais{
-        font-size: 15px;
-        font-weight: bold;
-        margin-top: 15px;
+        font-size: 10px;
+        margin-top: -30px;
     }
    
     
 }
-@media screen and (min-width: 1920px ) {
-    
-   
-    #cards{
-      width: 600px;
-      height:450px;
-      justify-content: center;
-      align-items: center;
-
-    }
-    #imagemCard{
-        width: 100%;
-        height: 200px;
-    }
-    #titulo{
-        font-size: 30px;
-    }
-    #descricao{
-        font-size: 18px;
-    }
-    #buttonSaibaMais{
-        font-size: 25px;
-        font-weight: bold;
-        margin-top: 50px;
-    }
-   
-    
-}
-
-
-
 
