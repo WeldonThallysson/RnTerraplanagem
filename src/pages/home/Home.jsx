@@ -139,15 +139,51 @@ const Home = () => {
       <CarrosselPrincipal />
 
       <Box
-        sx={{ display: "flex", justifyContent: "center",  flexDirection: "row",height:"500px" }}
-        id="Home"
+        sx={{ 
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "row",
+          height:"500px",
+         
+          gap: 1,
+        "@media (max-width:1080px)":{
+          flexDirection: "column",
+          height:"700px",
+          justifyContent: "flex-start",
+          alignItems: "center",
+          marginTop: "10px",
+        },
+        "@media (max-width:900px)":{
+          flexDirection: "column",
+          height:"700px",
+          justifyContent: "flex-start",
+          alignItems: "center",
+        },
+        "@media (max-width: 550px)":{
+          flexDirection: "column",
+          height:"100%",
+          justifyContent: "flex-start",
+          alignItems: "center",
+          marginBottom: 4
+          
+        }
+      
+      }}
       >
         <Box 
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "flex-start",
-            margin: "65px 15px",
+            margin: "60px 15px",
+            "@media (max-width: 1080px)":{
+              margin: "15px 5px",
+              display: "none",
+            },
+            "@media (max-width: 900px)":{
+              margin: "15px 15px",
+              display: "none",
+            }
           }}
         >
           <LineHorizontalComponent
@@ -155,6 +191,8 @@ const Home = () => {
             height={"5px"}
             borderRadius={"1px"}
             background={"#a50000"}
+            lineWidthMd={"200px"}
+            lineWidthLg={"300px"}
           />
         </Box>
 
@@ -165,15 +203,48 @@ const Home = () => {
             width: "60%",
             marginTop: "40px",
             gap: 1,
+            "@media (max-width: 1500px)":{
+             
+              width: "45%",
+            },
+            "@media (max-width: 1080px)":{
+              marginTop: "20px",
+              width: "85%",
+            } ,
+            "@media (max-width: 900px)":{
+              marginTop: "20px",
+              width: "90%",
+            } 
           }}
         >
-          <Typography sx={{ fontFamily: "Bungee", fontSize: 35 }}>
+          <Typography sx={{ fontFamily: "Bungee", fontSize: 35,
+            "@media (max-width: 1500px)":{
+              fontSize: 32,
+            },
+            "@media (max-width: 900px)":{
+              fontSize: 28,
+            }
+         }}>
             Quem Somos{" "}
           </Typography>
-          <Typography sx={{ fontFamily: "Montserrat", fontSize: 25 }}>
+          <Typography sx={{ fontFamily: "Montserrat", fontSize: 25 ,
+            "@media (max-width: 1500px)":{
+              fontSize: 20,
+            },
+            "@media (max-width: 550px)":{
+              fontSize: 18,
+            }   }}>
             Conheça a RN Terraplanagem !{" "}
           </Typography>
-          <Typography sx={{ fontFamily: "Montserrat", fontSize: 18 }}>
+          <Typography sx={{ fontFamily: "Montserrat", fontSize: 18,
+            "@media (max-width: 1500px)":{
+                      fontSize: 16,
+                      textAlign: "justify"
+              },
+            "@media (max-width: 550px)":{
+                fontSize: 12,
+                textAlign: "left"
+            }}}>
             Somos uma empresa comprometida em transformar terrenos em
             oportunidades. Conheça nossos serviços especializados e explore o
             site para encontrar a solução ideal para suas necessidades.
@@ -203,6 +274,7 @@ const Home = () => {
           spacing={2}
           p={0}
           gap={0}
+    
         >
           {informacoesCards.map((item) => (
             <Grid
@@ -210,11 +282,11 @@ const Home = () => {
               justifyContent={"center"}
               item
               xs={12}
-              sm={3.5}
-              md={3.3}
+              sm={1.4}
+              md={1.5}
               lg={1.7}
               xl={1.9}
-              margin={"50px 80px 50px 80px"}
+              margin={"30px 80px 30px 80px"}
             >
               <Cards
                 titulo={item.titulo}
@@ -226,27 +298,26 @@ const Home = () => {
           ))}
         </Grid>
       </Box>
-
-      <Box sx={{ display: "flex", height: "420px", background: "#c10000" }} id="Empresa">
-        <Box
-          sx={{
-            display: "flex",
-            height: "420px",
-            background: "#252525",
-            borderBottomRightRadius: 380,
-            boxShadow: "2px 1px 15px rgba(0,0,0,0.5)",
-          }}
-        >
-          <ComponentSobre />
-        </Box>
-      </Box>
-
+      
+       <ComponentSobre />
+   
       <Box
-        sx={{ display: "flex", flexDirection: "column", margin: "0 0 55px 0" }} 
-        id="Serviços"
+        sx={{
+        display: "flex", 
+        flexDirection: "column",
+        margin: "0 0 55px 0",
+        "@media (max-width: 550px)":{
+          display: "flex",
+          justifyContent: 'center',
+          alignItens: 'center'
+        }
+       }} 
       >
-        <Box sx={{ display: "flex", flexDirection: "row" }}>
-          <Box sx={{ display: "flex", margin: "65px 15px" }}>
+        <Box sx={{ display: "flex", flexDirection: "row"   }}>
+          <Box sx={{ display: "flex", margin: "65px 15px", 
+          "@media (max-width: 900px)":{
+             display: "none",
+          } }}>
             <LineHorizontalComponent
               width={"76px"}
               height={"5px"}
@@ -255,37 +326,63 @@ const Home = () => {
             />
           </Box>
           <Box
-            sx={{ display: "flex", margin: "42px 0", flexDirection: "column" }}
+            sx={{ 
+              display: "flex",
+              margin: "42px 0", 
+              flexDirection: "column",
+              "@media (max-width: 900px)":{
+                margin: "30px", 
+             }
+            
+            }}
           >
-            <Typography sx={{ fontFamily: "Bungee", fontSize: 35 }}>
+            <Typography sx={{ 
+              fontFamily: "Bungee", 
+              fontSize: 35,
+              "@media (max-width: 900px)":{
+                fontSize: 25,
+              } }}>
               Nossos Serviços
             </Typography>
             <Typography
-              sx={{ fontFamily: "Montserrat", fontSize: 25, textAlign: "left" }}
+              sx={{ 
+                fontFamily: "Montserrat",
+                fontSize: 25, 
+                textAlign: "left", 
+                "@media (max-width: 900px)":{
+                  fontSize: 20,
+                },
+                "@media (max-width: 550px)":{
+                  fontSize: 18,
+                }}}
             >
               Conheça nossos serviços !{" "}
             </Typography>
           </Box>
         </Box>
 
-        <Grid display={"flex"} justifyContent={"center"} container spacing={2}>
-          {informacoesCardsServicos.map((item) => (
-            <Grid
-              item
-              xs={12}
-              sm={3.5}
-              md={3.5}
-              lg={2.3}
-              xl={2.1}
-              margin={"5px 0 "}
-            >
-              <ServicosComponent
-                titulo={item.titulo}
-                descricao={item.descricao}
-                imagem={item.imagem}
-              />
-            </Grid>
-          ))}
+        <Grid display={"flex"} alignItems={"center"}  justifyContent={"center"} container spacing={2}>
+          
+            {informacoesCardsServicos.map((item) => (
+              <Grid
+                item
+                xs={9.5}
+                sm={3.5}
+                md={3.5}
+                lg={2.3}
+                xl={2.1}
+                margin={"5px 0 "} 
+               
+              >
+                <ServicosComponent
+                  titulo={item.titulo}
+                  descricao={item.descricao}
+                  imagem={item.imagem}
+                />
+              </Grid>
+            ))}    
+ 
+        
         </Grid>
       </Box>
 

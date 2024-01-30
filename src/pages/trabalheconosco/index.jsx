@@ -1,234 +1,359 @@
-import { Box, Button, Grid, TextField, Typography } from '@mui/material'
-import React from 'react'
-import LineHorizontalComponent from '../../components/LineHorizontal'
+import { Box, Button, Grid, TextField, Typography } from "@mui/material";
+import React, { useContext, useState } from "react";
+import LineHorizontalComponent from "../../components/LineHorizontal";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import MailIcon from "@mui/icons-material/Mail";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import { Worker, Viewer } from '@react-pdf-viewer/core';
-import '@react-pdf-viewer/core/lib/styles/index.css';
-import { useDropzone } from 'react-dropzone';
+import { Worker, Viewer } from "@react-pdf-viewer/core";
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import { useDropzone } from "react-dropzone";
+import TrabalheConoscoImg from '../../assets/trabalheconosco.jpg'
+import { Parallax } from "swiper/modules";
+import ParallaxHeader from "../../components/ParallaxHeader";
+import TrabalheConoscoParallax from '../../assets/parallaxImages/TrabalheConoscoParallax.jpg'
+import ParallaxFooter from "../../components/ParallaxFooter";
+import { useForm } from "react-hook-form";
+import { ContextGeral } from "../../contexts/ContextGeral";
 
 const TrabalheConosco = () => {
+  const [anexo,setAnexo] = useState()
+  const {sendCurriculum} = useContext(ContextGeral)
+  
 
-  const { getRootProps,getInputProps } = useDropzone({})
+  const onDrop = (accessFiles) => {
+    setAnexo(accessFiles)
+  };
 
-  const pdfjs = require('pdfjs-dist');
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm()
 
+  const onSubmit = (data) => { 
+    const dadosCurriculo = {
+      ...data,
+      Anexo: anexo
+    }
+
+    console.log(dadosCurriculo)
+    sendCurriculum(dadosCurriculo)
+  }
+  const { getRootProps, getInputProps } = useDropzone({ onDrop });
+  
   return (
-    <Box
-    sx={{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      background: "#e8e8e8",
-      width: "100%",
-      flexDirection: "column",
-      gap: 1,
-      height:"100vh"
-    }}
-  >
-     <Box sx={{display: "flex",flexDirection: "row",justifyContent: "flex-start", gap: 1, alignItems: "center", width: "100%",marginTop: 8, height:200, background: "#770000"}} >
-        <LineHorizontalComponent width={60} height={2} borderRadius={0.5} background={"white"}/>
-        <Typography sx={{fontFamily: "Bungee",fontSize: "38px",color: "white"}}>Trabalhe Conosco</Typography>
-    </Box> 
-   
-    <Box sx={{display: "flex",  
-      background: "#e8e8e8",
-      width: "100%",
-      flexDirection: "row",
-      gap: 20,
-      height:"100vh",
-      margin: "0px 0px",
-      justifyContent: "center",alignItems:"center"}}>
-        
-      
-    <Grid
-      sx={{ display: "flex", flexDirection: "column",}}
-      container
-      sm={1}
-      md={3}
-      lg={3}
-      xl={5}
-    >
-        <Grid item xl={15}
-          sx={{
-            display: "flex",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            gap: 2,
-            margin: "2rem 0"
-          }}
-        >
-          <Typography
-            sx={{
-              fontFamily: "Bungee",
-              fontSize: 30,
-              color: "black",
-              textAlign: "center",
-            }}
-          >
-           Cadastrar Curriculo
-          </Typography>
-          <LineHorizontalComponent
-            width={"382px"}
-            height={"3px"}
-            background={"black"}
-          />
-        </Grid>
-        
-      <form
-        style={{ display: "flex", flexDirection: "column", width: "100%" }}
-      >
-        <Grid item sx={{ display: "flex", gap: 2 }}>
-          <TextField
-            label="Nome"
-            variant="filled"
-            fullWidth
-            sx={{ color: "white", background: "white",border: "1px solid black"  }}
-          />
-          <TextField
-            label="Sobrenome"
-            variant="filled"
-            fullWidth
-            sx={{ color: "white", background: "white",border: "1px solid black"  }}
-          />
-        </Grid>
-
-        <Grid item sx={{ display: "flex", margin: "1rem 0" }}>
-          <TextField
-            id="filled-basic"
-            label="CPF"
-            fullWidth
-            variant="filled"
-            sx={{ color: "white", background: "white",border: "1px solid black"  }}
-          />
-        </Grid>
-        <Grid item sx={{ display: "flex", margin: "1rem 0" }}>
-          <TextField
-            id="filled-basic"
-            label="Email"
-            fullWidth
-            variant="filled"
-            sx={{ color: "white", background: "white",border: "1px solid black"  }}
-          />
-        </Grid>
-        <Grid item sx={{ display: "flex", margin: "1rem 0",gap: 2 }}>
-          <TextField
-            id="filled-basic"
-            label="Estado Civil"
-            fullWidth
-            variant="filled"
-            sx={{ color: "white", background: "white",border: "1px solid black"  }}
-          />
-          <TextField
-            label="Telefone"
-            variant="filled"
-            fullWidth
-            sx={{ color: "white", background: "white",border: "1px solid black"  }}
-          />
-        </Grid>
-        <Grid item sx={{ display: "flex", margin: "1rem 0" }}>
-        <TextField
-            id="filled-basic"
-            label="CEP"
-            fullWidth
-            variant="filled"
-            sx={{ color: "white", background: "white",border: "1px solid black"  }}
-          />
-        
-        </Grid>
-      
-
-        <Grid item sx={{ display: "flex", gap: 2 }}>
-          <TextField
-            label="Numero"
-            variant="filled"
-            fullWidth
-            sx={{ color: "white", background: "white",border: "1px solid black"  }}
-          />
-          <TextField
-            label="Endereço"
-            variant="filled"
-            fullWidth
-            sx={{ color: "white", background: "white",border: "1px solid black"  }}
-          />
-        </Grid> 
-        <Grid
-          item
-          sx={{ display: "flex", width: "100%", margin: "1rem 0" }}
-        >
-          <Button
-            sx={{
-              display: "flex",
-              width: "100%",
-              background: "#141414",
-              color: "white",
-              "&:hover":{
-                background: "#191919",
-              }
-            }}
-            type="submit"
-          >
-            Enviar
-          </Button>
-        </Grid>
-      </form>
-    </Grid>
-    <Grid
-    item
-    xl={15}
-      sx={{
+    <Box sx={{
         display: "flex",
-        flexDirection: "column",
         justifyContent: "center",
-        alignItems: "flex-start",
-        width: "40%",
+        alignItems: "center",
+        background: "#e8e8e8",
+        width: "100%",
+        flexDirection: "column",
         gap: 1,
-        marginBottom: "2%",
-      }}
-    >
+        height: "100%",
+      }}>
+        
+      <ParallaxHeader titulo={"Trabalhe Conosco"} backgroundParallax={TrabalheConoscoParallax} backgroundPosition={"auto"}/>
+
       <Box
         sx={{
           display: "flex",
-          flexDirection: "column",
+          background: "#e8e8e8",
+          width: "100%",
+          flexDirection: "row",
+          gap:20,
+          margin: "15px 0px",
           justifyContent: "center",
-          alignItems: "flex-start",
-          gap: 1,
+          alignItems: "center",
+
         }}
       >
-        <Box
-          {...getRootProps()}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: 2,
-            marginTop: '16px', padding: '16px', border: '2px dashed #ccc', borderRadius: '4px', cursor: 'pointer'
-          }}
+        <Grid
+          sx={{ display: "flex", flexDirection: "column" }}
+          container
+          sm={5}
+          md={5}
+          lg={5}
+          xl={5}
         >
-          <input {...getInputProps()}/>
-          <Typography
+          <Grid
+            item
             sx={{
-              fontFamily: "Bungee",
-              fontSize: 40,
-              color: "black",
-              textAlign: "center",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: 2,
+              margin: "1rem 1rem ",
             }}
           >
+            <Typography
+              sx={{
+                fontFamily: "Bungee",
+                fontSize: 30,
+                color: "black",
+                textAlign: "center",
+                "@media (max-width: 550px)":{
+                  fontSize: 20,
+                  textAlign: "center",
+                }
+              }}
+            >
+              Cadastrar Curriculo
+            </Typography>
+            <Box sx={{display: "none"}}>
+              <LineHorizontalComponent
+                width={"382px"}
+                height={"3px"}
+                background={"black"}
+                lineWidthXs={"100px"}
+              />
+            </Box>
+           
+          </Grid>
 
-             Anexar Curriculo
+          <form
+            style={{ display: "flex", flexDirection: "column", width: "100%" }}
+            onSubmit={handleSubmit(onSubmit)}
+
+          >
+            <Grid item sx={{ display: "flex", gap: 2 }}>
+              <TextField
+                {...register("Nome")}
+                label="Nome"
+                variant="filled"
+                
+                fullWidth
+                sx={{
+                  color: "white",
+                  background: "white",
+                  border: "1px solid black",
+                }}
+              />
+              <TextField
+                {...register("Sobrenome")}
+                label="Sobrenome"
+                variant="filled"
+                fullWidth
+                sx={{
+                  color: "white",
+                  background: "white",
+                  border: "1px solid black",
+                }}
+              />
+            </Grid>
+
+            <Grid item sx={{ display: "flex", margin: "1rem 0" }}>
+              <TextField
+                {...register("CPF")}                  
+                id="filled-basic"
+                label="CPF"
+                type="number"
+                fullWidth
+                variant="filled"
+                sx={{
+                  color: "white",
+                  background: "white",
+                  border: "1px solid black",
+                }}
+              />
+            </Grid>
+            <Grid item sx={{ display: "flex", margin: "1rem 0" }}>
+              <TextField
+              {...register("Email")}                  
+                id="filled-basic"
+                label="Email"
+                type="email"
+                fullWidth
+                variant="filled"
+                sx={{
+                  color: "white",
+                  background: "white",
+                  border: "1px solid black",
+                }}
+              />
+            </Grid>
+            <Grid item sx={{ display: "flex", margin: "1rem 0", gap: 2 }}>
+            
+              <TextField
+              {...register("Telefone")}
+                label="Telefone"
+                variant="filled"
+                fullWidth
+                sx={{
+                  color: "white",
+                  background: "white",
+                  border: "1px solid black",
+                }}
+              />
+            </Grid>
+            <Grid item sx={{ display: "flex", margin: "1rem 0" }}>
+              <TextField
+                {...register("CEP")}
+                id="filled-basic"
+                label="CEP"
+                type="number"
+                fullWidth
+                variant="filled"
+                sx={{
+                  color: "white",
+                  background: "white",
+                  border: "1px solid black",
+                }}
+              />
+            </Grid>
+
+            <Grid item sx={{ display: "flex", gap: 2 }}>
+              <TextField
+               {...register("Numero")}
+                label="Numero"
+                type="number"
+                variant="filled"
+                fullWidth
+                sx={{
+                  color: "white",
+                  background: "white",
+                  border: "1px solid black",
+                }}
+              />
+              <TextField
+               {...register("Endereco")}
+                label="Endereço"
+                variant="filled"
+                fullWidth
+                sx={{
+                  color: "white",
+                  background: "white",
+                  border: "1px solid black",
+                }}
+              />
+            </Grid>
+            <Grid
+              item
+              xl={15}
+              sx={{ display: "flex", width: "100%", margin: "1rem 0" }}
+            >
+              <Grid
+                item
+                xl={15}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "flex-start",
+                  width: "100%",
+                  gap: 1,
+                  marginBottom: "2%",
+                }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "flex-start",
+                    gap: 1,
+                    width: "100%",
+                  }}
+                >
+                  <Box
+                    {...getRootProps()}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: 2,
+                      width: "100%",
+                      marginTop: "5px",
+                      padding: "5px",
+                      border: "2px dashed #ccc",
+                      borderRadius: "4px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <input {...getInputProps()} />
+                    <Typography
+                      sx={{
+                        fontFamily: "Bungee",
+                        fontSize: 20,
+                        color: "black",
+                        textAlign: "center",
+                      }}
+                    >
+                      Anexar Curriculo
+                    </Typography>
+                  </Box>
+                </Box>
+              </Grid>
           
-          </Typography>
-       
-         </Box>
-       </Box>
-      </Grid>
-      
-    </Box> 
-  
-  </Box>
-  )
-}
 
-export default TrabalheConosco
+            </Grid>
+
+            <Button
+                sx={{
+                  display: "flex",
+                  width: "100%",
+                  padding: 1,
+                  background: "#141414",
+                  color: "white",
+                  "&:hover": {
+                    background: "#191919",
+                  },
+                }}
+                type="submit"
+              >
+                Enviar
+              </Button>
+          </form>
+        </Grid>
+   
+              <Grid
+                item
+                xl={15}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "40%",
+                  gap: 1,
+                  marginBottom: "2%",
+                  "@media (max-width: 1080px)": {
+                    display: "none"
+                  }
+                }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: 1,
+                  }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: 2,
+                      marginTop: "5px",
+                      padding: "5px",
+                      border: "2px solid #ccc",
+                      borderRadius: "4px",
+                    }}
+                  >
+                    <img src={TrabalheConoscoImg} style={{width: "100%", height: "500px",borderRadius: "4px"}}/>
+                  </Box>
+                </Box>
+              </Grid>
+    
+      </Box>
+      <ParallaxFooter titulo={""} height={"150px"} backgroundParallax={TrabalheConoscoParallax} backgroundPosition={"auto"}/>
+    </Box>
+  );
+};
+
+export default TrabalheConosco;

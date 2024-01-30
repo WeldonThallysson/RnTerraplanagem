@@ -21,7 +21,24 @@ const Cards = ({titulo,descricao,imagem,pathRoute}) => {
           transform: "translateY(-14px)",
           boxShadow: "2px 2px 12px rgba(0, 0, 0, 0.2)",
           cursor: "pointer"
-        }
+        },
+        "@media (max-width: 1500px)": {
+            width: 265
+
+        },
+        
+        "@media (max-width: 900px)": {
+          width: 240
+
+      },
+      "@media (max-width: 550px)": {
+        width: 320
+
+        },
+        "@media (max-width: 370px)": {
+          width: 280
+  
+          },
         }}>
         
         <CardMedia 
@@ -29,11 +46,40 @@ const Cards = ({titulo,descricao,imagem,pathRoute}) => {
           image={imagem}
         />
         
-        <CardContent sx={{height:120}}>
-          <Typography sx={{fontSize: "25px",fontFamily:"Montserrat"}} gutterBottom variant="h5" component="div">
+        <CardContent sx={{
+          height:120,  
+         "@media (max-width: 1500px)": {
+            height:95,
+  
+          },
+          "@media (max-width: 900px)": {
+            height:110,
+  
+          }
+          }}>
+          <Typography sx={{
+            fontSize: "25px",
+            fontFamily:"Montserrat",
+            "@media (max-width: 1500px)": {
+              fontSize: "18px"
+  
+          },
+          
+            }} gutterBottom variant="h5" component="div">
             {titulo}
           </Typography>
-          <Typography  sx={{fontSize: "12px",fontFamily:"Montserrat"}}variant="body2" color="text.secondary">
+          <Typography  sx={{
+            fontSize: "12px",
+            fontFamily:"Montserrat",
+            "@media (max-width: 1500px)": {
+              fontSize: "12px"
+  
+          },
+          "@media (max-width: 500px)": {
+            fontSize: "13px"
+
+        },
+            }}variant="body2" color="text.secondary">
             {descricao}
           </Typography>
         </CardContent>

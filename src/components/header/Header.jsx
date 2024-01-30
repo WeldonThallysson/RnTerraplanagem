@@ -23,39 +23,32 @@ const navItems = [
     id: 1,
     offset: -600,
     label: "Home",
-    pathRoute: "/", 
+    pathRoute: "/",
   },
   {
     id: 2,
     offset: -300,
     label: "Empresa",
-    pathRoute: "/Empresa", 
- 
+    pathRoute: "/Empresa",
   },
   {
     id: 3,
     offset: 200,
     pathRoute: "/obras",
-    label: "Obras"
+    label: "Obras",
   },
- 
+
   {
     id: 4,
     offset: 200,
     pathRoute: "/servicos",
-    label: "Serviços"
+    label: "Serviços",
   },
   {
     id: 5,
     offset: 200,
     pathRoute: "/trabalheconosco",
-    label: "Trabalhe Conosco"
-  },
-  {
-    id: 6,
-    offset: 0,
-    label: "Contato",
-    pathRoute: "/contato", 
+    label: "Trabalhe Conosco",
   },
 ];
 
@@ -74,13 +67,9 @@ const Header = (props) => {
         {navItems.map((item) => (
           <ListItem key={item.id} disablePadding>
             <ListItemButton sx={{ textAlign: "center", fontSize: "10px" }}>
-         
-        
-        
-                  <a href={item.pathRoute}>
-                    <ListItemText primary={item.label} />
-                  </a>
-           
+              <Button sx={{ color: "#141414" }} href={item.pathRoute}>
+                <ListItemText primary={item.label} />
+              </Button>
             </ListItemButton>
           </ListItem>
         ))}
@@ -95,40 +84,86 @@ const Header = (props) => {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
-        sx={{ background: "#141414", margin: "0 0", padding: "0 15px" }}
+        sx={{ background: "#141414", margin: "0", padding: "0 ", width: "100%"  }}
         component="nav"
       >
-        <Toolbar sx={{ margin: "0 8px" }}>
+        <Toolbar sx={{ margin: "0" }}>
+          <Box sx={{ 
+            display: 
+            { 
+            md: "none", 
+            sm: "flex", 
+            width: "100%" 
+             } }}>
+            <a href="/">
+              <img
+                src={Logo}
+                alt="Imagem da logo"
+                style={{
+                  width: "130px",
+                }}
+              />
+            </a>
+          </Box>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 0, display: { md: "none" }, }}
           >
-             <MenuIcon />
+            <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { md: "flex", xs: "none" },
+              justifyContent: "space-between",
+              alignItems: "center",
+      
+              
+            }}
           >
-            <img
-              src={Logo}
-              alt="Imagem da logo"
-              style={{ width: "190px", marginTop: "10px" }}
-            />
-          </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            <a href="/">
+              <img
+                src={Logo}
+                alt="Imagem da logo"
+                style={{
+                  width: "150px",
+                }}
+              />
+            </a>
+          </Box>
+          <Box sx={{ 
+            display: { xs: "none", sm: "none", md: "flex"},
+             
+             justifyContent: "center",
+             alignItems: "center"
+             
+             }}>
             {navItems.map((item) => (
               <>
-              {
-                <Button key={item.id} sx={{ color: "#fff" }} href={item.pathRoute}>
-                  {item.label}
-                </Button>
-               }
+                {
+                  <Button key={item.id} href={item.pathRoute}>
+                    <Typography
+                      sx={{
+                        fontSize: "15px",
+                        color: "#fff",
+                        "@media (max-width: 1080px)": {
+                          fontSize: "12px",
+                        },
+                        "@media (max-width: 900px)": {
+                          fontSize: "11px",
+                        },
+                      }}
+                    >
+                      {" "}
+                      {item.label}{" "}
+                    </Typography>
+                  </Button>
+                }
               </>
-           
             ))}
           </Box>
         </Toolbar>
@@ -143,7 +178,8 @@ const Header = (props) => {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: "block", sm: "none" },
+            display: { md: "block", lg: "none" },
+            
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,

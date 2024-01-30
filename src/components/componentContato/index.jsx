@@ -1,12 +1,28 @@
 import { Box, Button, Grid, TextField, Typography } from '@mui/material'
-import React from 'react'
+import React, { useContext } from 'react'
 import LineHorizontalComponent from '../LineHorizontal'
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import MailIcon from "@mui/icons-material/Mail";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { useForm } from 'react-hook-form';
+import { ContextGeral } from '../../contexts/ContextGeral';
 
-function ComponentContato() {
+function ComponentContato({background,height}) {
+
+  const {sendContatoEmail} = useContext(ContextGeral)
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm()
+
+
+  const onSubmit = (data) => { 
+    sendContatoEmail(data)
+  }
   return (
     <Box
         id="Contato"
@@ -14,31 +30,51 @@ function ComponentContato() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          background: "#660000",
+          background: background ? background : "#660000",
           width: "100%",
-          gap: 12,
-          height: "500px",
+          gap: 15,
+          height: height ? height : "500px",
+          "@media (max-width: 900px)":{
+            gap: 5,
+          }
         }}
       >
         <Grid
           sx={{ display: "flex", flexDirection: "column" }}
           container
-          sm={1}
-          md={3}
-          lg={3}
+          xs={10}
+          sm={6}
+          md={5}
+          lg={5}
           xl={5}
-        >
+        > 
+
+          <Box sx={{
+             display: "none",
+            "@media (max-width: 550px)":{
+             display: "flex", padding: "15px",
+             justifyContent: "center",
+             alignItems:"center"
+          }}}>
+            <Typography sx={{   fontFamily: "Bungee",
+                  fontSize: 20,
+                  color: "white",
+                  textAlign: "center",}}>Entre em Contato</Typography>
+          </Box>
           <form
+            onSubmit={handleSubmit(onSubmit)}
             style={{ display: "flex", flexDirection: "column", width: "100%" }}
           >
             <Grid item sx={{ display: "flex", gap: 2 }}>
               <TextField
+                {...register("Nome")}
                 label="Nome"
                 variant="filled"
                 fullWidth
                 sx={{ color: "white", background: "white" }}
               />
               <TextField
+                 {...register("Telefone")}
                 label="Telefone"
                 variant="filled"
                 fullWidth
@@ -49,6 +85,7 @@ function ComponentContato() {
             <Grid item sx={{ display: "flex", margin: "1rem 0" }}>
               <TextField
                 id="filled-basic"
+                {...register("Email")}
                 label="Email"
                 fullWidth
                 variant="filled"
@@ -57,6 +94,7 @@ function ComponentContato() {
             </Grid>
             <Grid item sx={{ display: "flex" }}>
               <TextField
+               {...register("Mensagem")}
                 id="outlined-multiline-flexible"
                 label="Mensagem"
                 multiline
@@ -96,6 +134,9 @@ function ComponentContato() {
             width: "40%",
             gap: 1,
             marginBottom: "2%",
+            "@media (max-width: 550px)":{
+              display: "none",
+            }
           }}
         >
           <Box
@@ -118,26 +159,50 @@ function ComponentContato() {
               <Typography
                 sx={{
                   fontFamily: "Bungee",
-                  fontSize: 40,
+                  fontSize: 35,
                   color: "white",
                   textAlign: "center",
+                  "@media (max-width: 1500px)":{
+                    fontSize: 25,
+                  },
+                  "@media (max-width: 1080px)":{
+                    fontSize: 20,
+                  },
+                  "@media (max-width: 900px)":{
+                    fontSize: 28
+                  }
                 }}
               >
                 Entre em Contato
               </Typography>
-              <LineHorizontalComponent
-                width={"300px"}
-                height={"5px"}
-                background={"white"}
-              />
+              <Box sx={{
+                display: "flex",
+                "@media (max-width: 900px)":{
+                  display:"none"
+              }}}>
+                <LineHorizontalComponent
+                  width={"300px"}
+                  height={"5px"}
+                  background={"white"}
+                  lineWidthLg={"150px"}
+                  lineWidthMd={"50px"}
+                />
+              </Box>
+             
             </Box>
 
             <Typography
               sx={{
                 fontFamily: "Montserrat",
-                fontSize: 25,
+                fontSize: 20,
                 color: "white",
                 textAlign: "center",
+                "@media (max-width: 1500px)":{
+                  fontSize: 18,
+                },
+                "@media (max-width: 900px)":{
+                  fontSize: 12
+                }
               }}
             >
               Dúvidas, reclamações ou sugestões?
@@ -157,9 +222,15 @@ function ComponentContato() {
             <Typography
               sx={{
                 fontFamily: "Montserrat",
-                fontSize: 25,
+                fontSize: 20,
                 color: "white",
                 textAlign: "center",
+                "@media (max-width: 1500px)":{
+                  fontSize: 18,
+                },
+                "@media (max-width: 900px)":{
+                  fontSize: 15
+                }
               }}
             >
               <LocalPhoneIcon /> 48 99966-8246
@@ -167,9 +238,15 @@ function ComponentContato() {
             <Typography
               sx={{
                 fontFamily: "Montserrat",
-                fontSize: 25,
+                fontSize: 20,
                 color: "white",
                 textAlign: "center",
+                "@media (max-width: 1500px)":{
+                  fontSize: 18,
+                },
+                "@media (max-width: 900px)":{
+                  fontSize: 15
+                }
               }}
             >
               <InstagramIcon /> @rnterraplanagem
@@ -177,15 +254,29 @@ function ComponentContato() {
             <Typography
               sx={{
                 fontFamily: "Montserrat",
-                fontSize: 25,
+                fontSize: 20,
                 color: "white",
                 textAlign: "center",
+                "@media (max-width: 1500px)":{
+                  fontSize: 18,
+                },
+                "@media (max-width: 900px)":{
+                  fontSize: 15
+                }
               }}
             >
               <MailIcon /> 48 99966-8246
             </Typography>
             <Typography
-              sx={{ fontFamily: "Montserrat", fontSize: 25, color: "white" }}
+              sx={{ fontFamily: "Montserrat", fontSize: 20, color: "white",
+              "@media (max-width: 1500px)":{
+                fontSize: 18,
+              },
+              "@media (max-width: 900px)":{
+                fontSize: 15
+              }
+            
+            }}
             >
               <LocationOnIcon /> Sombrio - SC
             </Typography>

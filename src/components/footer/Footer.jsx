@@ -10,7 +10,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   alignItems: "flex-start",
   paddingTop: theme.spacing(1),
   paddingBottom: theme.spacing(2),
-  // Override media queries injected by theme.mixins.toolbar
+
   "@media all": {
     minHeight: 128,
   },
@@ -22,7 +22,7 @@ const Footer = () => {
 
       <AppBar position="static" sx={{ backgroundColor: " #141414",  }}>
 
-        <StyledToolbar sx={{ display: "flex", justifyContent: "center", alignItems:'flex-end',marginTop:'-70px' }}>
+        <StyledToolbar sx={{ display: "flex", justifyContent: "center", alignItems:'flex-end',marginTop:'-65px' }}>
           <Box
             sx={{
               display: "flex",
@@ -31,21 +31,23 @@ const Footer = () => {
             }}
             
           >  
-           <Typography
-              variant="h5"
-              noWrap
-              component="div"
-              sx={{ flexGrow: 1, alignSelf: "flex-start", fontSize: "10px", marginBottom:'-47px' }}
-            >
-              
-              Desenvolvido por
-            </Typography>
-            <img
-              style={{ width: "70px", marginBottom: "-20px" }}
-              src={LogoUpStudio}
-              alt="Logo da agência que criou o site, em cor laranja e branco"
-              
-            />
+         
+              <Typography
+                  variant="h5"
+                  noWrap
+                  component="div"
+                  sx={{ flexGrow: 1, alignSelf: "flex-start", fontSize: "10px", marginBottom:'-47px', }}
+                >
+                  
+                  Desenvolvido pela
+                </Typography>
+                <img
+                  style={{ width: "70px", marginBottom: "-20px",marginRight: "-8px"  }}
+                  src={LogoUpStudio}
+                  alt="Logo da agência que criou o site, em cor laranja e branco"
+                  
+                />
+         
             <Typography
               variant="h5"
               noWrap

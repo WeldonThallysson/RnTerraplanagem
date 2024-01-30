@@ -13,6 +13,11 @@ import App from "./App.jsx";
 
 import ProviderContext from "./contexts/ContextGeral/index.jsx";
 import TrabalheConosco from "./pages/trabalheconosco/index.jsx";
+import WhatsappButtonComponent from "./components/whatsappButton/index.jsx";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
+  
 
 const router = createBrowserRouter([
   {
@@ -32,10 +37,6 @@ const router = createBrowserRouter([
     element: <Servicos />,
   },
   {
-    path: "/contato",
-    element: <Contato />,
-  },
-  {
     path: "/trabalheconosco",
     element: <TrabalheConosco />,
   },
@@ -45,9 +46,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <>
   <ProviderContext>
      <Header/>
+      <ToastContainer />
       <RouterProvider router={router} >
         <App/>
       </RouterProvider>
+      
+      <WhatsappButtonComponent/>
      <Footer/>
   </ProviderContext>
   </>

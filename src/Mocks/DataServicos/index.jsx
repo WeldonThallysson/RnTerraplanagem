@@ -59,6 +59,10 @@ export const DataServicos = [
             {
               id:3,
               img: EquipamentosTerraplanagem3
+            },
+            {
+              id:4,
+              img: EquipamentosTerraplanagem3
             }
           
         ],
@@ -83,6 +87,10 @@ export const DataServicos = [
             {
               id:3,
               img: EquipamentosTerraplanagem3
+            },
+            {
+              id:4,
+              img: EquipamentosTerraplanagem3
             }
           
          ],
@@ -106,6 +114,10 @@ export const DataServicos = [
             },
             {
               id:3,
+              img: EquipamentosTerraplanagem3
+            },
+            {
+              id:4,
               img: EquipamentosTerraplanagem3
             }
           
@@ -132,6 +144,10 @@ export const DataServicos = [
             {
               id:3,
               img: EquipamentosTerraplanagem3
+            },
+            {
+              id:4,
+              img: EquipamentosTerraplanagem3
             }
           ],
           icone: IconesLoteamento
@@ -152,6 +168,10 @@ export const DataServicos = [
             },
             {
               id:3,
+              img: EquipamentosTerraplanagem3
+            },
+            {
+              id:4,
               img: EquipamentosTerraplanagem3
             }
           
@@ -176,6 +196,10 @@ export const DataServicos = [
             {
               id:3,
               img: EquipamentosTerraplanagem3
+            },
+            {
+              id:4,
+              img: EquipamentosTerraplanagem3
             }
           ],
           icone: IconeEscavacoes
@@ -198,6 +222,10 @@ export const DataServicos = [
           {
             id:3,
             img: EquipamentosTerraplanagem3
+          },
+          {
+            id:4,
+            img: EquipamentosTerraplanagem3
           }
         ] , 
         icone: IconeAreia 
@@ -218,6 +246,10 @@ export const DataServicos = [
           },
           {
             id:3,
+            img: EquipamentosTerraplanagem3
+          },
+          {
+            id:4,
             img: EquipamentosTerraplanagem3
           }
 
@@ -241,6 +273,10 @@ export const DataServicos = [
             },
             {
               id:3,
+              img: EquipamentosTerraplanagem3
+            },
+            {
+              id:4,
               img: EquipamentosTerraplanagem3
             }
           
