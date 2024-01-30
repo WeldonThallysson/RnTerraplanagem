@@ -23,7 +23,7 @@ export default function ProviderContext({children}) {
       
        emailjs.send("service_2ccqpwf", "template_1ihrisa", templateParams, "TdWTDHZq9K7dTh36Z")
         .then((res) => {
-          toast.success("Mensagem Enviada com sucesso !")
+          toast.success("Mensagem enviada com sucesso !")
           console.log(res)
         })
       .catch((err) => {
@@ -54,7 +54,7 @@ export default function ProviderContext({children}) {
       
        emailjs.send("service_2ccqpwf", "template_y32ms7n", templateParams, "TdWTDHZq9K7dTh36Z")
         .then((res) => {
-          toast.success("Curriculo Enviado !")
+          toast.success("Curriculo enviado com sucesso !")
           console.log(res)
         })
       .catch((err) => {
