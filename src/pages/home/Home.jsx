@@ -233,7 +233,12 @@ const Home = () => {
             },
             "@media (max-width: 550px)":{
               fontSize: 18,
-            }   }}>
+            },
+            
+            "@media (max-width: 280px)":{
+              fontSize: 16,
+            }  
+            }}>
             Conheça a RN Terraplanagem !{" "}
           </Typography>
           <Typography sx={{ fontFamily: "Montserrat", fontSize: 18,
@@ -279,6 +284,7 @@ const Home = () => {
           {informacoesCards.map((item) => (
             <Grid
               display={"flex"}
+              alignItems={"center"}
               justifyContent={"center"}
               item
               xs={12}
@@ -341,6 +347,9 @@ const Home = () => {
               fontSize: 35,
               "@media (max-width: 900px)":{
                 fontSize: 25,
+              },
+              "@media (max-width: 280px)":{
+                fontSize: 20,
               } }}>
               Nossos Serviços
             </Typography>
@@ -354,6 +363,9 @@ const Home = () => {
                 },
                 "@media (max-width: 550px)":{
                   fontSize: 18,
+                },
+                "@media (max-width: 280px)":{
+                  fontSize: 15,
                 }}}
             >
               Conheça nossos serviços !{" "}

@@ -16,7 +16,7 @@ const Servicos = () => {
     <Box sx={{ display: "flex", height: "100%", flexDirection: "column" }}>
       <ParallaxHeader titulo={"Nossos Serviços"} backgroundParallax={ServicosParallax}  backgroundPosition={"auto"}/>
 
-      <Grid container spacing={2} p={"35px 40px"} gap={8}>
+      <Grid container spacing={2} p={"35px 25px"} gap={8}>
         {DataServicos.map((item) => (
           <Grid
             item
@@ -79,7 +79,7 @@ const Servicos = () => {
           </Grid>
         ))}
       </Grid>
-      <ParallaxFooter titulo={""} height={"150px"} backgroundParallax={ServicosParallax} backgroundPosition={"auto"}/>
+      <ParallaxFooter titulo={""} height={"120px"} backgroundParallax={ServicosParallax} backgroundPosition={"auto"}/>
     </Box>
   );
 };

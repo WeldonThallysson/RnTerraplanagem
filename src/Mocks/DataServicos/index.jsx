@@ -4,6 +4,52 @@ import sobre3 from "../../assets/imagensSobreEmpresa/sobre3.jpg";
 import EquipamentosTerraplanagem1 from "../../assets/imagensSobreEmpresa/EquipamentosTerraplanagem1.jpeg";
 import EquipamentosTerraplanagem2 from "../../assets/imagensSobreEmpresa/EquipamentosTerraplanagem2.jpeg";
 import EquipamentosTerraplanagem3 from "../../assets/imagensSobreEmpresa/EquipamentosTerraplanagem3.jpeg";
+import EquipamentosTerraplanagem4 from "../../assets/imagensSobreEmpresa/EquipamentosTerraplanagem4.jpg";
+import TerraplanagemGeral1 from "../../assets/imagensSobreEmpresa/TerraplanagemGeral1.jpg";
+import TerraplanagemGeral2 from "../../assets/imagensSobreEmpresa/TerraplanagemGeral2.jpg";
+import TerraplanagemGeral3 from "../../assets/imagensSobreEmpresa/TerraplanagemGeral3.jpg";
+import TerraplanagemGeral4 from "../../assets/imagensSobreEmpresa/TerraplanagemGeral4.jpg";
+
+import Demolicao1 from '../../assets/imagensSobreEmpresa/Demolicao1.jpg'
+import Demolicao2 from '../../assets/imagensSobreEmpresa/Demolicao2.jpg'
+import Demolicao3 from '../../assets/imagensSobreEmpresa/Demolicao3.jpg'
+import Demolicao4 from '../../assets/imagensSobreEmpresa/Demolicao4.jpg'
+
+import Drenagem1 from '../../assets/imagensSobreEmpresa/Drenagem1.jpg'
+import Drenagem2 from '../../assets/imagensSobreEmpresa/Drenagem2.jpeg'
+import Drenagem3 from '../../assets/imagensSobreEmpresa/Drenagem3.jpg'
+import Drenagem4 from '../../assets/imagensSobreEmpresa/Drenagem4.jpeg'
+
+import Loteamento1 from '../../assets/imagensSobreEmpresa/Loteamento1.jpg'
+import Loteamento2 from '../../assets/imagensSobreEmpresa/Loteamento2.jpg'
+import Loteamento3 from '../../assets/imagensSobreEmpresa/Loteamento3.jpg'
+import Loteamento4 from '../../assets/imagensSobreEmpresa/Loteamento4.jpg'
+
+import Aterro1 from '../../assets/imagensSobreEmpresa/Aterro1.jpg'
+import Aterro2 from '../../assets/imagensSobreEmpresa/Aterro2.jpg'
+import Aterro3 from '../../assets/imagensSobreEmpresa/Aterro3.jpg'
+import Aterro4 from '../../assets/imagensSobreEmpresa/Aterro4.jpg'
+
+import Escavacoes1 from '../../assets/imagensSobreEmpresa/Escavacoes1.jpg'
+import Escavacoes2 from '../../assets/imagensSobreEmpresa/Escavacoes2.jpg'
+import Escavacoes3 from '../../assets/imagensSobreEmpresa/Escavacoes3.jpeg'
+import Escavacoes4 from '../../assets/imagensSobreEmpresa/Escavacoes4.jpg'
+
+import PedraAreiaBrita1 from '../../assets/imagensSobreEmpresa/PedraAreiaBrita1.jpg'
+import PedraAreiaBrita2 from '../../assets/imagensSobreEmpresa/PedraAreiaBrita2.jpeg'
+import PedraAreiaBrita3 from '../../assets/imagensSobreEmpresa/PedraAreiaBrita3.jpeg'
+import PedraAreiaBrita4 from '../../assets/imagensSobreEmpresa/PedraAreiaBrita4.jpeg'
+
+import ReparodeRuas1 from '../../assets/imagensSobreEmpresa/ReparodeRuas1.jpg'
+import ReparodeRuas2 from '../../assets/imagensSobreEmpresa/ReparodeRuas2.jpg'
+import ReparodeRuas3 from '../../assets/imagensSobreEmpresa/ReparodeRuas3.jpeg'
+import ReparodeRuas4 from '../../assets/imagensSobreEmpresa/ReparodeRuas4.jpeg'
+
+import Calcamento1 from '../../assets/imagensSobreEmpresa/Calcamento1.jpeg'
+import Calcamento2 from '../../assets/imagensSobreEmpresa/Calcamento2.jpg'
+import Calcamento3 from '../../assets/imagensSobreEmpresa/Calcamento3.jpeg'
+import Calcamento4 from '../../assets/imagensSobreEmpresa/Calcamento4.jpeg'
+
 import IconeAluguel from "../../assets/imgIconesCardsServicos/alugueldeequipamentos.png";
 import IconeAreia from "../../assets/imgIconesCardsServicos/areia.png";
 import IconeAterro from "../../assets/imgIconesCardsServicos/aterro.png";
@@ -36,7 +82,7 @@ export const DataServicos = [
           },
           {
             id:4,
-            img: EquipamentosTerraplanagem3
+            img: EquipamentosTerraplanagem4
           }
         ],
         icone: IconeAluguel
@@ -50,19 +96,19 @@ export const DataServicos = [
           imgs: [ 
             {
               id: 1,
-              img: EquipamentosTerraplanagem1
+              img: TerraplanagemGeral1
             },
             {
               id:2,
-              img: EquipamentosTerraplanagem2
+              img: TerraplanagemGeral2
             },
             {
               id:3,
-              img: EquipamentosTerraplanagem3
+              img: TerraplanagemGeral3
             },
             {
               id:4,
-              img: EquipamentosTerraplanagem3
+              img: TerraplanagemGeral4
             }
           
         ],
@@ -78,19 +124,19 @@ export const DataServicos = [
           imgs: [ 
             {
               id: 1,
-              img: EquipamentosTerraplanagem1
+              img: Demolicao1
             },
             {
               id:2,
-              img: EquipamentosTerraplanagem2
+              img: Demolicao2
             },
             {
               id:3,
-              img: EquipamentosTerraplanagem3
+              img: Demolicao3
             },
             {
               id:4,
-              img: EquipamentosTerraplanagem3
+              img: Demolicao4
             }
           
          ],
@@ -106,19 +152,19 @@ export const DataServicos = [
           imgs: [ 
             {
               id: 1,
-              img: EquipamentosTerraplanagem1
+              img: Drenagem1
             },
             {
               id:2,
-              img: EquipamentosTerraplanagem2
+              img: Drenagem2
             },
             {
               id:3,
-              img: EquipamentosTerraplanagem3
+              img: Drenagem3
             },
             {
               id:4,
-              img: EquipamentosTerraplanagem3
+              img: Drenagem4
             }
           
           ],
@@ -135,19 +181,19 @@ export const DataServicos = [
           imgs: [ 
             {
               id: 1,
-              img: EquipamentosTerraplanagem1
+              img: Loteamento1
             },
             {
               id:2,
-              img: EquipamentosTerraplanagem2
+              img: Loteamento2
             },
             {
               id:3,
-              img: EquipamentosTerraplanagem3
+              img: Loteamento3
             },
             {
               id:4,
-              img: EquipamentosTerraplanagem3
+              img: Loteamento4
             }
           ],
           icone: IconesLoteamento
@@ -160,19 +206,19 @@ export const DataServicos = [
           imgs: [ 
             {
               id: 1,
-              img: EquipamentosTerraplanagem1
+              img: Aterro1
             },
             {
               id:2,
-              img: EquipamentosTerraplanagem2
+              img: Aterro2
             },
             {
               id:3,
-              img: EquipamentosTerraplanagem3
+              img: Aterro3
             },
             {
               id:4,
-              img: EquipamentosTerraplanagem3
+              img: Aterro4
             }
           
         ],
@@ -187,19 +233,19 @@ export const DataServicos = [
           imgs: [ 
             {
               id: 1,
-              img: EquipamentosTerraplanagem1
+              img: Escavacoes1
             },
             {
               id:2,
-              img: EquipamentosTerraplanagem2
+              img: Escavacoes2
             },
             {
               id:3,
-              img: EquipamentosTerraplanagem3
+              img: Escavacoes3
             },
             {
               id:4,
-              img: EquipamentosTerraplanagem3
+              img: Escavacoes4
             }
           ],
           icone: IconeEscavacoes
@@ -213,19 +259,19 @@ export const DataServicos = [
         imgs: [
           {
             id: 1,
-            img: EquipamentosTerraplanagem1
+            img: PedraAreiaBrita1
           },
           {
             id:2,
-            img: EquipamentosTerraplanagem2
+            img: PedraAreiaBrita2
           },
           {
             id:3,
-            img: EquipamentosTerraplanagem3
+            img: PedraAreiaBrita3
           },
           {
             id:4,
-            img: EquipamentosTerraplanagem3
+            img: PedraAreiaBrita4
           }
         ] , 
         icone: IconeAreia 
@@ -238,19 +284,19 @@ export const DataServicos = [
         imgs: [
           {
             id: 1,
-            img: EquipamentosTerraplanagem1
+            img: ReparodeRuas1
           },
           {
             id:2,
-            img: EquipamentosTerraplanagem2
+            img: ReparodeRuas2
           },
           {
             id:3,
-            img: EquipamentosTerraplanagem3
+            img: ReparodeRuas3
           },
           {
             id:4,
-            img: EquipamentosTerraplanagem3
+            img: ReparodeRuas4
           }
 
         ],
@@ -265,20 +311,21 @@ export const DataServicos = [
     
              {
               id: 1,
-              img: EquipamentosTerraplanagem1
+              img: Calcamento1
             },
             {
               id:2,
-              img: EquipamentosTerraplanagem2
+              img: Calcamento2
             },
             {
               id:3,
-              img: EquipamentosTerraplanagem3
+              img: Calcamento3
             },
             {
               id:4,
-              img: EquipamentosTerraplanagem3
-            }
+              img: Calcamento4
+            },
+           
           
         ],
          icone: IconeCalcamento

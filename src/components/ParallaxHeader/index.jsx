@@ -55,6 +55,10 @@ function ParallaxHeader({titulo, backgroundParallax,backgroundPosition,height}) 
           color: "white",
           "@media (max-width: 550px)": {
             fontSize: "28px",
+          },
+        
+          "@media (max-width: 480px)": {
+            fontSize: "25px",
           } }}
         >
           {titulo}

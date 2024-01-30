@@ -37,7 +37,7 @@ const Obras = () => {
         
        </Grid>
     </Grid>
-    <ParallaxFooter titulo={""} height={"150px"} backgroundParallax={ObrasParallax} backgroundPosition={"auto"}/>
+    <ParallaxFooter titulo={""} height={"120px"} backgroundParallax={ObrasParallax} backgroundPosition={"auto"}/>
   </Box>
   )
 }

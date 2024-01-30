@@ -39,6 +39,10 @@ const Cards = ({titulo,descricao,imagem,pathRoute}) => {
           width: 280
   
           },
+        "@media (max-width: 280px)": {
+            width: 260
+    
+            },
         }}>
         
         <CardMedia 

@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import React from 'react'
 
-function LineHorizontalComponent({width,height,borderRadius,background,lineWidthXl,lineWidthLg,lineWidthMd,lineWidthSm,lineWidthXs,lineWidthXss}) {
+function LineHorizontalComponent({width,height,borderRadius,background,lineWidthXl,lineWidthLg,lineWidthMd,lineWidthSm,lineWidthXs,lineWidthXss,lineWidthXXss}) {
   return (
     <Box sx={{
       width: width, 
@@ -28,7 +28,11 @@ function LineHorizontalComponent({width,height,borderRadius,background,lineWidth
       },
       "@media (max-width: 320px)": {
         width: lineWidthXss
+      },
+      "@media (max-width: 280px)": {
+        width: lineWidthXXss
       }
+    
     
     
     }}/>

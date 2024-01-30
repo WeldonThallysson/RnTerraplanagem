@@ -24,6 +24,10 @@ export default function ComponentSobre() {
           width: "100%",
           height: "480px", 
         },
+        "@media (max-width: 280px)":{
+          width: "100%",
+          height: "580px", 
+        },
     }}
     
     >
@@ -51,8 +55,13 @@ export default function ComponentSobre() {
           "@media (max-width: 375px)":{
             width: "100%",
             height: "480px", 
+            borderBottomRightRadius: 100,
           },     
-          
+          "@media (max-width: 280px)":{
+            width: "100%",
+            height: "580px", 
+            borderBottomRightRadius: 100,
+          },
         }}
       >
         <Box
@@ -144,6 +153,9 @@ export default function ComponentSobre() {
                   "@media (max-width: 375px)": {
                     fontSize: 20,
                   }, 
+                  "@media (max-width: 280px)": {
+                    fontSize: 18,
+                  }, 
                 }}
                 >
                   Sobre Nós
@@ -168,6 +180,7 @@ export default function ComponentSobre() {
                   lineWidthSm={"200px"}
                   lineWidthXs={"180px"}
                   lineWidthXss={"130px"}
+                  lineWidthXXss={"100px"}
                 />
               </Box>
             </Box>

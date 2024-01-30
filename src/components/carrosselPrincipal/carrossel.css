@@ -43,6 +43,14 @@
 
 
   /*Responsividade*/
+  @media screen and (min-width: 260px) {
+    .swiper-slide img{
+        height: 280px;
+        margin-top: 55px;
+        object-fit:cover;
+    }
+    
+  }
   @media screen and (min-width: 320px) {
     .swiper-slide img{
         height: 280px;

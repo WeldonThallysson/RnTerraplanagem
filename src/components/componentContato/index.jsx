@@ -55,11 +55,15 @@ function ComponentContato({background,height}) {
              display: "flex", padding: "15px",
              justifyContent: "center",
              alignItems:"center"
-          }}}>
-            <Typography sx={{   fontFamily: "Bungee",
+          }
+          }}>
+            <Typography sx={{fontFamily: "Bungee",
                   fontSize: 20,
                   color: "white",
-                  textAlign: "center",}}>Entre em Contato</Typography>
+                  textAlign: "center",
+                  "@media (max-width: 280px)":{
+                    fontSize: 18,
+                 }}}>Entre em Contato</Typography>
           </Box>
           <form
             onSubmit={handleSubmit(onSubmit)}
