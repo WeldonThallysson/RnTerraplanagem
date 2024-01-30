@@ -29,7 +29,7 @@ const navItems = [
     id: 2,
     offset: -300,
     label: "Empresa",
-    pathRoute: "/Empresa",
+    pathRoute: "/empresa",
   },
   {
     id: 3,
