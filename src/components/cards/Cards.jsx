@@ -23,22 +23,36 @@ const Cards = ({titulo,descricao,imagem,pathRoute}) => {
           cursor: "pointer"
         },
         "@media (max-width: 1500px)": {
-            width: 265
+            width: 278
 
         },
+        "@media (max-width: 1366px)": {
+          width: 265
+
+      },
+        
+        "@media (max-width: 1080px)": {
+          width: 288
+
+      },
         
         "@media (max-width: 900px)": {
           width: 240
 
       },
+      
       "@media (max-width: 550px)": {
-        width: 320
+        width: 380
 
         },
-        "@media (max-width: 370px)": {
-          width: 280
+        "@media (max-width: 375px)": {
+          width: 340
   
           },
+          "@media (max-width: 325px)": {
+            width: 300
+    
+            },
         "@media (max-width: 280px)": {
             width: 260
     

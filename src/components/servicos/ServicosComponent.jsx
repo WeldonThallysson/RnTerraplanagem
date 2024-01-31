@@ -40,7 +40,18 @@ const ServicosComponent = ({titulo,descricao,imagem}) => {
           justifyContent: "center",
           maxWidth: "330px",
           height: "180px",
+        },
+        "@media (max-width: 500px)":{
+          justifyContent: "center",
+          maxWidth: "328px",
+          height: "180px",
+        },
+        "@media (max-width: 425px)":{
+          justifyContent: "center",
+          maxWidth: "458px",
+          height: "180px",
         }
+
         }} >
         <CardMedia sx={{ width:'70px', height: '70px', }}
          image={imagem}

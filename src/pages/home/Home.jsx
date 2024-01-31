@@ -193,6 +193,7 @@ const Home = () => {
             background={"#a50000"}
             lineWidthMd={"200px"}
             lineWidthLg={"300px"}
+            lineWidthXl={"60px"}
           />
         </Box>
 
@@ -288,11 +289,17 @@ const Home = () => {
               justifyContent={"center"}
               item
               xs={12}
-              sm={1.4}
-              md={1.5}
+              sm={1.5}
+              md={1.7}
               lg={1.7}
               xl={1.9}
-              margin={"30px 80px 30px 80px"}
+              margin={"0px 80px 100px 80px"}
+              sx={{
+                "@media (max-width: 1366px)": {
+                 
+                  margin: "0px 80px 100px 80px"
+              },
+              }}
             >
               <Cards
                 titulo={item.titulo}
@@ -364,9 +371,7 @@ const Home = () => {
                 "@media (max-width: 550px)":{
                   fontSize: 18,
                 },
-                "@media (max-width: 280px)":{
-                  fontSize: 15,
-                }}}
+                }}
             >
               Conheça nossos serviços !{" "}
             </Typography>
@@ -378,7 +383,7 @@ const Home = () => {
             {informacoesCardsServicos.map((item) => (
               <Grid
                 item
-                xs={9.5}
+                xs={9.6}
                 sm={3.5}
                 md={3.5}
                 lg={2.3}
