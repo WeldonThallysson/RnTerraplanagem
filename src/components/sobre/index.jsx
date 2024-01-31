@@ -76,6 +76,10 @@ export default function ComponentSobre() {
             "@media (max-width: 1500px)": {
               margin: "0 30px",
             },
+            "@media (max-width: 1366px)": {
+              margin: "0 30px",
+              width: "95%",
+            },
             "@media (max-width: 1080px)": {
               margin: "0px",
               width: "95%",
