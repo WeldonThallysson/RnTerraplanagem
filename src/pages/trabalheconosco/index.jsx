@@ -126,7 +126,7 @@ const TrabalheConosco = () => {
               flexDirection: "row",
               justifyContent:"center",
               alignItems:"center",
-              gap: 8,
+              gap: 5,
             }}
            >
             <Grid item xs={10} sm={10} md={10} lg={5} xl={5}>
@@ -376,7 +376,7 @@ const TrabalheConosco = () => {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              width: "40%",
+              width: "50%",
               gap: 1,
               marginBottom: "2%",
               "@media (max-width: 1080px)": {

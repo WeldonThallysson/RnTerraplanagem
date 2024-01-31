@@ -78,13 +78,16 @@ const Empresa = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",
+
           }}
           flexDirection={"column"}
           gap={2}
         >
           <Typography
-            sx={{ fontSize: "24px", fontFamily: "Bungee", fontWeight: "bold" }}
+            sx={{ fontSize: "24px", fontFamily: "Bungee", fontWeight: "bold",
+            "@media (max-width: 550px)": {
+              fontSize: "20px",
+            }, }}
           >
             {" "}
             A RN Terraplanagem
@@ -94,18 +97,19 @@ const Empresa = () => {
               fontSize: "18px",
               fontFamily: "Montserrat",
               textAlign: "justify",
+              letterSpacing: "-0.05rem;",
               "@media (max-width: 550px)": {
                 fontSize: "12px",
               },
             }}
           >
             A RN Terraplanagem destaca-se como referência na prestação de
-            serviços especializados, oferecendo soluções completas em
-            terraplanagem, drenagem, aluguel de equipamentos, loteamento, aterro
-            e calçamento de ruas. Com uma equipe qualificada e equipamentos de
-            última geração, garantimos eficiência e precisão em cada projeto. A
+            serviços especializados,oferecendo soluções completas em
+            terraplanagem, drenagem,aluguel de equipamentos, loteamento, aterro
+            e calçamento de ruas.Com uma equipe qualificada e equipamentos de
+            última geração,garantimos eficiência e precisão em cada projeto.A
             terraplanagem, essencial para o preparo adequado do terreno, é
-            realizada com maestria, assegurando bases sólidas para construções
+            realizada com maestria,assegurando bases sólidas para construções
             futuras.{" "}
           </Typography>
           <Grid container sx={{ display: "flex", gap: 2 }}>
@@ -146,6 +150,7 @@ const Empresa = () => {
               fontSize: "18px",
               fontFamily: "Montserrat",
               textAlign: "justify",
+              letterSpacing: "-0.05rem;",
               "@media (max-width: 550px)": {
                 fontSize: "12px",
               },
@@ -200,6 +205,7 @@ const Empresa = () => {
               fontSize: "18px",
               fontFamily: "Montserrat",
               textAlign: "justify",
+              letterSpacing: "-0.05rem;",
               "@media (max-width: 550px)": {
                 fontSize: "12px",
               },

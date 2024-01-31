@@ -188,6 +188,7 @@ function ComponentContato({background,height}) {
                   width={"300px"}
                   height={"5px"}
                   background={"white"}
+                  lineWidthXl={"250px"}
                   lineWidthLg={"150px"}
                   lineWidthMd={"50px"}
                 />

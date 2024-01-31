@@ -32,9 +32,11 @@ const Servicos = () => {
             {" "}
             <Typography
               sx={{
-                fontSize: "24px",
+                fontSize: "22px",
                 fontFamily: "Bungee",
                 fontWeight: "bold",
+                letterSpacing: "1px;",
+               
               }}
             >
               <img src={item.icone} width={35} /> {item.titulo}
@@ -44,6 +46,10 @@ const Servicos = () => {
                 fontSize: "18px",
                 fontFamily: "Montserrat",
                 textAlign: "justify",
+                letterSpacing: "-0.08rem;",
+                "@media (max-width: 550px)": {
+                  fontSize: "15px",
+                },
               }}
             >
                {item.descricao}{" "}

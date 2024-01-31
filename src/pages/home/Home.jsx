@@ -242,14 +242,18 @@ const Home = () => {
             }}>
             Conheça a RN Terraplanagem !{" "}
           </Typography>
-          <Typography sx={{ fontFamily: "Montserrat", fontSize: 18,
+          <Typography sx={{
+             fontFamily: "Montserrat", fontSize: 18,
+             textAlign: "justify",
+             letterSpacing: "-0.06rem;",
             "@media (max-width: 1500px)":{
                       fontSize: 16,
                       textAlign: "justify"
               },
             "@media (max-width: 550px)":{
                 fontSize: 12,
-                textAlign: "left"
+                textAlign: "left",
+               
             }}}>
             Somos uma empresa comprometida em transformar terrenos em
             oportunidades. Conheça nossos serviços especializados e explore o
@@ -268,6 +272,7 @@ const Home = () => {
              
                 },
             }}
+            href="/empresa"
           >
             Conheça mais...
           </Button>
