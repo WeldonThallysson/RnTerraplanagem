@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from '@mui/material'
 import React from 'react'
 import ParallaxHeader from '../../components/ParallaxHeader'
-import ComponentContato from '../../components/componentContato'
+import ComponentContato from '../home/component.contato'
 const Contato = () => {
 
 

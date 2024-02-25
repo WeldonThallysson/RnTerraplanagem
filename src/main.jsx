@@ -17,7 +17,6 @@ import WhatsappButtonComponent from "./components/whatsappButton/index.jsx";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-  
 
 const router = createBrowserRouter([
   {

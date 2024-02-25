@@ -1,17 +1,17 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import sobre1 from "../../assets/imagensSobreEmpresa/sobre1.jpg";
-import sobre2 from "../../assets/imagensSobreEmpresa/sobre2.jpg";
-import sobre3 from "../../assets/imagensSobreEmpresa/sobre3.jpg";
-import EquipamentosTerraplanagem1 from "../../assets/imagensSobreEmpresa/EquipamentosTerraplanagem1.jpeg";
-import EquipamentosTerraplanagem2 from "../../assets/imagensSobreEmpresa/EquipamentosTerraplanagem2.jpeg";
-import EquipamentosTerraplanagem3 from "../../assets/imagensSobreEmpresa/EquipamentosTerraplanagem3.jpeg";
-import terraplanagem1 from "../../assets/imagensSobreEmpresa/terraplanagem1.jpg";
-import terraplanagem2 from "../../assets/imagensSobreEmpresa/TerraplanagemGeral2.jpg";
-import terraplanagem3 from "../../assets/imagensSobreEmpresa/terraplanagem3.jpg";
-import caminhaocarregado from "../../assets/imagensObras/caminhaocarregado.jpeg";
+import sobre1 from "../../assets/imagensSobreEmpresa/sobre1_11zon.webp";
+import sobre2 from "../../assets/imagensSobreEmpresa/sobre2_11zon.webp";
+import sobre3 from "../../assets/imagensSobreEmpresa/sobre3_11zon.webp";
+import EquipamentosTerraplanagem1 from "../../assets/imagensSobreEmpresa/EquipamentosTerraplanagem1_11zon.webp";
+import EquipamentosTerraplanagem2 from "../../assets/imagensSobreEmpresa/EquipamentosTerraplanagem2_11zon.webp";
+import EquipamentosTerraplanagem3 from "../../assets/imagensSobreEmpresa/EquipamentosTerraplanagem3_11zon.webp";
+import terraplanagem1 from "../../assets/imagensSobreEmpresa/TerraplanagemGeral1_11zon.webp";
+import terraplanagem2 from "../../assets/imagensSobreEmpresa/TerraplanagemGeral2_11zon.webp";
+import terraplanagem3 from "../../assets/imagensSobreEmpresa/TerraplanagemGeral3_11zon.webp";
+
 import ParallaxHeader from "../../components/ParallaxHeader";
-import SobreEmpresa from "../../assets/parallaxImages/SobreEmpresa.jpg";
+import SobreEmpresa from "../../assets/parallaxImages/SobreEmpresa_11zon.webp";
 import ParallaxFooter from "../../components/ParallaxFooter";
 
 const Empresa = () => {

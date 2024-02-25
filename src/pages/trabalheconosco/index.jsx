@@ -1,22 +1,18 @@
 import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import React, { useContext, useState } from "react";
 import LineHorizontalComponent from "../../components/LineHorizontal";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import MailIcon from "@mui/icons-material/Mail";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import { Worker, Viewer } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import { useDropzone } from "react-dropzone";
-import TrabalheConoscoImg from "../../assets/trabalheconosco.jpg";
-import { Parallax } from "swiper/modules";
+import TrabalheConoscoImg from "../../assets/trabalheconosco_11zon.webp";
 import ParallaxHeader from "../../components/ParallaxHeader";
-import TrabalheConoscoParallax from "../../assets/parallaxImages/TrabalheConoscoParallax.jpg";
+import TrabalheConoscoParallax from "../../assets/parallaxImages/ParallaxTrabalheConoscoOficial_11zon.webp";
 import ParallaxFooter from "../../components/ParallaxFooter";
 import { useForm } from "react-hook-form";
 import { ContextGeral } from "../../contexts/ContextGeral";
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
+
+
 const TrabalheConosco = () => {
   const [anexo, setAnexo] = useState([]);
   const [anexoNome, setAnexoNome] = useState("");

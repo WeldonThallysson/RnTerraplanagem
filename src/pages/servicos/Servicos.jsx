@@ -1,17 +1,13 @@
-import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import LineHorizontalComponent from "../../components/LineHorizontal";
-import IconeAluguel from "../../assets/imgIconesCardsServicos/alugueldeequipamentos.png";
-
+import { Box, Grid, Typography } from "@mui/material";
 import { DataServicos } from "../../Mocks/DataServicos/index";
 import ParallaxHeader from "../../components/ParallaxHeader";
-import ServicosParallax from '../../assets/parallaxImages/ServicosParallax.jpg'
+import ServicosParallax from '../../assets/parallaxImages/ServicosParallax_11zon.webp'
 import ParallaxFooter from "../../components/ParallaxFooter";
 
 
 const Servicos = () => {
 
-  
   return (
     <Box sx={{ display: "flex", height: "100%", flexDirection: "column" }}>
       <ParallaxHeader titulo={"Nossos Serviços"} backgroundParallax={ServicosParallax}  backgroundPosition={"auto"}/>

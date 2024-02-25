@@ -11,7 +11,7 @@ function LineHorizontalComponent({width,height,borderRadius,background,lineWidth
       "@media (max-width: 1980px)":{
         width: width, 
        },
-      "@media (max-width: 1500px)": {
+      "@media (max-width: 1540px)": {
          width: lineWidthXl
       },
       "@media (max-width: 1040px)": {
