@@ -1,2 +1,2 @@
-# Link do Site no ar
+# Link do deploy do site oficial
 https://rnterraplanagem.com.br/
