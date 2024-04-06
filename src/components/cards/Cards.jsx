@@ -22,8 +22,8 @@ const Cards = ({titulo,descricao,imagem,pathRoute}) => {
           boxShadow: "2px 2px 12px rgba(61, 20, 20,0.3)",
           cursor: "pointer"
         },
-        "@media (max-width: 1540px)": {
-            width: 290
+        "@media (max-width: 1500px)": {
+            width: 250
 
         },
         "@media (max-width: 1366px)": {
@@ -67,7 +67,7 @@ const Cards = ({titulo,descricao,imagem,pathRoute}) => {
         <CardContent sx={{
           height:120,  
          "@media (max-width: 1540px)": {
-            height:125,
+            height:105,
   
           },
           "@media (max-width: 900px)": {

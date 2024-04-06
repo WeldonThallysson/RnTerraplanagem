@@ -73,7 +73,7 @@ function ComponenteInicio() {
             xs={12}
             sm={1.5}
             md={1.7}
-            lg={1.8}
+            lg={1.7}
             xl={1.9}
             margin={"0px 80px 100px 80px"}
             sx={{
